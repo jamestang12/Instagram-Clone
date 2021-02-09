@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		523EE8AB25D22CE90096FC76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523EE8AA25D22CE90096FC76 /* Assets.xcassets */; };
 		523EE8B025D237A10096FC76 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE8AF25D237A10096FC76 /* FeedCell.swift */; };
 		523EE8B325D238670096FC76 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE8B225D238670096FC76 /* Extensions.swift */; };
+		523EE8BB25D349BC0096FC76 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE8BA25D349BB0096FC76 /* LoginController.swift */; };
+		523EE8BF25D349DC0096FC76 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE8BE25D349DC0096FC76 /* RegistrationController.swift */; };
 		C6090B8CC99EE209D075E6D7 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71284AAB3AA14139AEAA6285 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		523EE8AD25D22CF30096FC76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		523EE8AF25D237A10096FC76 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		523EE8B225D238670096FC76 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		523EE8BA25D349BB0096FC76 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		523EE8BE25D349DC0096FC76 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		71284AAB3AA14139AEAA6285 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8908B035F4CEF7F4499732A1 /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +71,6 @@
 				8908B035F4CEF7F4499732A1 /* Pods-InstagramClone.debug.xcconfig */,
 				412407AC87DD745B1A4CFB33 /* Pods-InstagramClone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,6 +147,7 @@
 		523EE89425D204300096FC76 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				523EE8B925D349970096FC76 /* Authentication */,
 				523EE89725D2054C0096FC76 /* MainTabController.swift */,
 				523EE89A25D229160096FC76 /* FeedController.swift */,
 				523EE89D25D229260096FC76 /* SearchController.swift */,
@@ -159,6 +163,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		523EE8B925D349970096FC76 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				523EE8BA25D349BB0096FC76 /* LoginController.swift */,
+				523EE8BE25D349DC0096FC76 /* RegistrationController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		DEE4F4A8CD7906148968E56A /* Frameworks */ = {
@@ -283,9 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523EE8BF25D349DC0096FC76 /* RegistrationController.swift in Sources */,
 				523EE8A125D2293C0096FC76 /* ImageSelectorController.swift in Sources */,
 				523EE87D25D203A80096FC76 /* ViewController.swift in Sources */,
 				523EE89B25D229160096FC76 /* FeedController.swift in Sources */,
+				523EE8BB25D349BC0096FC76 /* LoginController.swift in Sources */,
 				523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */,
 				523EE8B025D237A10096FC76 /* FeedCell.swift in Sources */,
 				523EE89E25D229260096FC76 /* SearchController.swift in Sources */,
