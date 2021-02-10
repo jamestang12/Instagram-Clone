@@ -7,6 +7,14 @@ target 'InstagramClone' do
 
   # Pods for InstagramClone
   pod 'JGProgressHUD'
-
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'	
+  pod 'Firebase/Firestore'	
+  pod 'Firebase/Storage'	
+  pod 'Firebase/Messaging'	
+  pod 'Firebase/Auth'	
+  pod 'ActiveLabel'
+  pod 'SDWebImage', '~>4.4.2'
+  pod 'YPImagePicker'
 
 end
