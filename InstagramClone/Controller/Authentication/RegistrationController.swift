@@ -10,6 +10,9 @@ import UIKit
 class RegisterationController: UIViewController{
     
     // MARK: - Properties
+    
+    private var viewModel = RegistrationViewModel()
+    
     private let plushPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
@@ -42,8 +45,8 @@ class RegisterationController: UIViewController{
     private let signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        button.setTitleColor(UIColor(white: 1, alpha: 0.67), for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
         button.layer.cornerRadius = 5
         button.setHeight(50)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
@@ -61,8 +64,8 @@ class RegisterationController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureUI()
+        configureNotificationObservers()
     }
     
     // MARK: - Actions
@@ -70,8 +73,22 @@ class RegisterationController: UIViewController{
         navigationController?.popViewController(animated: true)
     }
     
-    // MARK: - Helpers
+    @objc func textDidChange(sender: UITextField){
+        if sender == emailTextField{
+            viewModel.email = sender.text
+        }else if sender == passwordTextField{
+            viewModel.password = sender.text
+        }else if sender == fullNameTextField{
+            viewModel.fullName = sender.text
+        }else if sender == UserNameTextField{
+            viewModel.userName = sender.text
+        }
+        
+        
+        updateForm()
+    }
     
+    // MARK: - Helpers
     func configureUI(){
         configureGradientLayer()
         
@@ -89,4 +106,21 @@ class RegisterationController: UIViewController{
 
     }
     
+    func configureNotificationObservers(){
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        fullNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        UserNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+
+
+    }
+    
+}
+
+extension RegisterationController: FormViewModel{
+    func updateForm() {
+        signUpButton.backgroundColor = viewModel.buttonBackgroundColor
+        signUpButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        signUpButton.isEnabled = viewModel.formIsValid
+    }
 }
