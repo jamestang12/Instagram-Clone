@@ -98,7 +98,7 @@ class  FeedCell: UICollectionViewCell {
         
         addSubview(postImageView)
         postImageView.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8)
-        postImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
+       postImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
         
         configureActionButtons()
         
