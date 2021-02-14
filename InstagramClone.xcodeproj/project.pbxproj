@@ -29,6 +29,8 @@
 		523EE8C825D49FE90096FC76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 523EE8C725D49FE80096FC76 /* GoogleService-Info.plist */; };
 		523EE8EA25D4A6A30096FC76 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE8E925D4A6A30096FC76 /* ImageUploader.swift */; };
 		523EE8ED25D4A6B50096FC76 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE8EC25D4A6B50096FC76 /* AuthService.swift */; };
+		523EE8F025D8C6C10096FC76 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE8EF25D8C6C00096FC76 /* ProfileCell.swift */; };
+		523EE8F325D8C6D10096FC76 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE8F225D8C6D10096FC76 /* ProfileHeader.swift */; };
 		C6090B8CC99EE209D075E6D7 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71284AAB3AA14139AEAA6285 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		523EE8C725D49FE80096FC76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		523EE8E925D4A6A30096FC76 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		523EE8EC25D4A6B50096FC76 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		523EE8EF25D8C6C00096FC76 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		523EE8F225D8C6D10096FC76 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		71284AAB3AA14139AEAA6285 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8908B035F4CEF7F4499732A1 /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +157,7 @@
 		523EE89325D2042D0096FC76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				523EE8F525D8C6E20096FC76 /* Profile */,
 				523EE8AF25D237A10096FC76 /* FeedCell.swift */,
 				523EE8C125D355210096FC76 /* CustomTextField.swift */,
 			);
@@ -187,6 +192,15 @@
 				523EE8BE25D349DC0096FC76 /* RegistrationController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		523EE8F525D8C6E20096FC76 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				523EE8EF25D8C6C00096FC76 /* ProfileCell.swift */,
+				523EE8F225D8C6D10096FC76 /* ProfileHeader.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		DEE4F4A8CD7906148968E56A /* Frameworks */ = {
@@ -320,6 +334,7 @@
 				523EE87D25D203A80096FC76 /* ViewController.swift in Sources */,
 				523EE89B25D229160096FC76 /* FeedController.swift in Sources */,
 				523EE8BB25D349BC0096FC76 /* LoginController.swift in Sources */,
+				523EE8F325D8C6D10096FC76 /* ProfileHeader.swift in Sources */,
 				523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */,
 				523EE8B025D237A10096FC76 /* FeedCell.swift in Sources */,
 				523EE89E25D229260096FC76 /* SearchController.swift in Sources */,
@@ -327,6 +342,7 @@
 				523EE8B325D238670096FC76 /* Extensions.swift in Sources */,
 				523EE89825D2054C0096FC76 /* MainTabController.swift in Sources */,
 				523EE8A425D229570096FC76 /* NotificationController.swift in Sources */,
+				523EE8F025D8C6C10096FC76 /* ProfileCell.swift in Sources */,
 				523EE88325D203A80096FC76 /* InstagramClone.xcdatamodeld in Sources */,
 				523EE87B25D203A80096FC76 /* SceneDelegate.swift in Sources */,
 				523EE8C225D355220096FC76 /* CustomTextField.swift in Sources */,
