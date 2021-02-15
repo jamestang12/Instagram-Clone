@@ -34,6 +34,7 @@
 		523EE8F825DA12860096FC76 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE8F725DA12850096FC76 /* UserService.swift */; };
 		523EE8FF25DA132F0096FC76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE8FE25DA132F0096FC76 /* Constants.swift */; };
 		523EE90225DA16630096FC76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE90125DA16630096FC76 /* User.swift */; };
+		523EE90525DA1E980096FC76 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE90425DA1E970096FC76 /* ProfileViewModel.swift */; };
 		C6090B8CC99EE209D075E6D7 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71284AAB3AA14139AEAA6285 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		523EE8F725DA12850096FC76 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		523EE8FE25DA132F0096FC76 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		523EE90125DA16630096FC76 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		523EE90425DA1E970096FC76 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		71284AAB3AA14139AEAA6285 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8908B035F4CEF7F4499732A1 /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				523EE8C425D376CF0096FC76 /* AuthenricationViewModel.swift */,
+				523EE90425DA1E970096FC76 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				523EE8EA25D4A6A30096FC76 /* ImageUploader.swift in Sources */,
 				523EE8ED25D4A6B50096FC76 /* AuthService.swift in Sources */,
 				523EE8C525D376CF0096FC76 /* AuthenricationViewModel.swift in Sources */,
+				523EE90525DA1E980096FC76 /* ProfileViewModel.swift in Sources */,
 				523EE87D25D203A80096FC76 /* ViewController.swift in Sources */,
 				523EE89B25D229160096FC76 /* FeedController.swift in Sources */,
 				523EE8BB25D349BC0096FC76 /* LoginController.swift in Sources */,
