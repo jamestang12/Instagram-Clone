@@ -36,6 +36,7 @@
 		523EE90225DA16630096FC76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE90125DA16630096FC76 /* User.swift */; };
 		523EE90525DA1E980096FC76 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE90425DA1E970096FC76 /* ProfileViewModel.swift */; };
 		523EE90825DC775A0096FC76 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE90725DC775A0096FC76 /* UserCell.swift */; };
+		523EE90B25DDAF360096FC76 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE90A25DDAF350096FC76 /* UserCellViewModel.swift */; };
 		C6090B8CC99EE209D075E6D7 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71284AAB3AA14139AEAA6285 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		523EE90125DA16630096FC76 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		523EE90425DA1E970096FC76 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		523EE90725DC775A0096FC76 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		523EE90A25DDAF350096FC76 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		71284AAB3AA14139AEAA6285 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8908B035F4CEF7F4499732A1 /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 			children = (
 				523EE8C425D376CF0096FC76 /* AuthenricationViewModel.swift */,
 				523EE90425DA1E970096FC76 /* ProfileViewModel.swift */,
+				523EE90A25DDAF350096FC76 /* UserCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				523EE8B025D237A10096FC76 /* FeedCell.swift in Sources */,
 				523EE90825DC775A0096FC76 /* UserCell.swift in Sources */,
 				523EE89E25D229260096FC76 /* SearchController.swift in Sources */,
+				523EE90B25DDAF360096FC76 /* UserCellViewModel.swift in Sources */,
 				523EE8A725D229690096FC76 /* ProfileController.swift in Sources */,
 				523EE8B325D238670096FC76 /* Extensions.swift in Sources */,
 				523EE8F825DA12860096FC76 /* UserService.swift in Sources */,
