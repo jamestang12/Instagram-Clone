@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52374BC125DF1E75009E9F7E /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BC025DF1E75009E9F7E /* UploadPostController.swift */; };
+		52374BC425DF215F009E9F7E /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BC325DF215F009E9F7E /* InputTextView.swift */; };
 		523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87825D203A80096FC76 /* AppDelegate.swift */; };
 		523EE87B25D203A80096FC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87A25D203A80096FC76 /* SceneDelegate.swift */; };
 		523EE87D25D203A80096FC76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87C25D203A80096FC76 /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		412407AC87DD745B1A4CFB33 /* Pods-InstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.release.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.release.xcconfig"; sourceTree = "<group>"; };
+		52374BC025DF1E75009E9F7E /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
+		52374BC325DF215F009E9F7E /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		523EE87525D203A80096FC76 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523EE87825D203A80096FC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523EE87A25D203A80096FC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			children = (
 				523EE8B225D238670096FC76 /* Extensions.swift */,
 				523EE8FE25DA132F0096FC76 /* Constants.swift */,
+				52374BC325DF215F009E9F7E /* InputTextView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				523EE8A025D2293C0096FC76 /* ImageSelectorController.swift */,
 				523EE8A325D229570096FC76 /* NotificationController.swift */,
 				523EE8A625D229690096FC76 /* ProfileController.swift */,
+				52374BC025DF1E75009E9F7E /* UploadPostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -351,12 +357,14 @@
 				523EE8ED25D4A6B50096FC76 /* AuthService.swift in Sources */,
 				523EE8C525D376CF0096FC76 /* AuthenricationViewModel.swift in Sources */,
 				523EE90525DA1E980096FC76 /* ProfileViewModel.swift in Sources */,
+				52374BC125DF1E75009E9F7E /* UploadPostController.swift in Sources */,
 				523EE87D25D203A80096FC76 /* ViewController.swift in Sources */,
 				523EE89B25D229160096FC76 /* FeedController.swift in Sources */,
 				523EE8BB25D349BC0096FC76 /* LoginController.swift in Sources */,
 				523EE8F325D8C6D10096FC76 /* ProfileHeader.swift in Sources */,
 				523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */,
 				523EE8B025D237A10096FC76 /* FeedCell.swift in Sources */,
+				52374BC425DF215F009E9F7E /* InputTextView.swift in Sources */,
 				523EE90825DC775A0096FC76 /* UserCell.swift in Sources */,
 				523EE89E25D229260096FC76 /* SearchController.swift in Sources */,
 				523EE90B25DDAF360096FC76 /* UserCellViewModel.swift in Sources */,
