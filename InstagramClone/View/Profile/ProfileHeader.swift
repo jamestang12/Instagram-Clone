@@ -115,7 +115,7 @@ class ProfileHeader: UICollectionViewCell {
         topDivider.backgroundColor = .lightGray
         
         let bottomDivider = UIView()
-        topDivider.backgroundColor = .lightGray
+        bottomDivider.backgroundColor = .lightGray
         
         let buttonStack = UIStackView(arrangedSubviews: [gridButton, listButton, bookmarkButton])
         buttonStack.distribution = .fillEqually
@@ -124,6 +124,7 @@ class ProfileHeader: UICollectionViewCell {
         addSubview(bottomDivider)
         
         buttonStack.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 50)
+        
         topDivider.anchor(top: buttonStack.topAnchor, left: leftAnchor, right: rightAnchor, height: 0.5)
         bottomDivider.anchor(top: buttonStack.bottomAnchor, left: leftAnchor, right: rightAnchor, height: 0.5)
 

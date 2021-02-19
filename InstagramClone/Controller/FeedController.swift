@@ -14,6 +14,8 @@ class FeedController: UICollectionViewController {
     // MARK: - Lifecycle
     private var posts = [Post]()
     
+    var post: Post?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -41,6 +43,7 @@ class FeedController: UICollectionViewController {
     
     // MARK: - API
     func fetchPosts(){
+        guard post == nil else { return }
         PostService.fetchPosts { (posts) in
             self.posts = posts
             self.collectionView.refreshControl?.endRefreshing()
@@ -54,7 +57,10 @@ class FeedController: UICollectionViewController {
         
         collectionView.register(FeedCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(habdleLogout))
+        if post == nil {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(habdleLogout))
+        }
+        
         
         navigationItem.title = "Feed"
         
@@ -68,12 +74,17 @@ class FeedController: UICollectionViewController {
 // MARK: - UICollectionViewDataSource
 extension FeedController{
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts.count
+        return post == nil ? posts.count : 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
-        cell.viewModel = PostViewModel(post: posts[indexPath.row])
+        
+        if let post = post {
+            cell.viewModel = PostViewModel(post: post)
+        }else {
+            cell.viewModel = PostViewModel(post: posts[indexPath.row])
+        }
         return cell
     }
 }
