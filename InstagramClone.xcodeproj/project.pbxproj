@@ -10,6 +10,7 @@
 		52374BC125DF1E75009E9F7E /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BC025DF1E75009E9F7E /* UploadPostController.swift */; };
 		52374BC425DF215F009E9F7E /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BC325DF215F009E9F7E /* InputTextView.swift */; };
 		52374BC725DF6904009E9F7E /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BC625DF6903009E9F7E /* PostService.swift */; };
+		52374BCA25DF7472009E9F7E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BC925DF7472009E9F7E /* Post.swift */; };
 		523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87825D203A80096FC76 /* AppDelegate.swift */; };
 		523EE87B25D203A80096FC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87A25D203A80096FC76 /* SceneDelegate.swift */; };
 		523EE87D25D203A80096FC76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87C25D203A80096FC76 /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		52374BC025DF1E75009E9F7E /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
 		52374BC325DF215F009E9F7E /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		52374BC625DF6903009E9F7E /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		52374BC925DF7472009E9F7E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		523EE87525D203A80096FC76 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523EE87825D203A80096FC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523EE87A25D203A80096FC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				523EE90125DA16630096FC76 /* User.swift */,
+				52374BC925DF7472009E9F7E /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				523EE90525DA1E980096FC76 /* ProfileViewModel.swift in Sources */,
 				52374BC125DF1E75009E9F7E /* UploadPostController.swift in Sources */,
 				523EE87D25D203A80096FC76 /* ViewController.swift in Sources */,
+				52374BCA25DF7472009E9F7E /* Post.swift in Sources */,
 				523EE89B25D229160096FC76 /* FeedController.swift in Sources */,
 				523EE8BB25D349BC0096FC76 /* LoginController.swift in Sources */,
 				523EE8F325D8C6D10096FC76 /* ProfileHeader.swift in Sources */,
