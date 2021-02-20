@@ -12,6 +12,8 @@
 		52374BC725DF6904009E9F7E /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BC625DF6903009E9F7E /* PostService.swift */; };
 		52374BCA25DF7472009E9F7E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BC925DF7472009E9F7E /* Post.swift */; };
 		52374BCD25E05AA6009E9F7E /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BCC25E05AA6009E9F7E /* PostViewModel.swift */; };
+		52374BD025E1C65C009E9F7E /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BCF25E1C65B009E9F7E /* CommentController.swift */; };
+		52374BD325E1CA26009E9F7E /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BD225E1CA26009E9F7E /* CommentCell.swift */; };
 		523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87825D203A80096FC76 /* AppDelegate.swift */; };
 		523EE87B25D203A80096FC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87A25D203A80096FC76 /* SceneDelegate.swift */; };
 		523EE87D25D203A80096FC76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87C25D203A80096FC76 /* ViewController.swift */; };
@@ -52,6 +54,8 @@
 		52374BC625DF6903009E9F7E /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		52374BC925DF7472009E9F7E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		52374BCC25E05AA6009E9F7E /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		52374BCF25E1C65B009E9F7E /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
+		52374BD225E1CA26009E9F7E /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		523EE87525D203A80096FC76 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523EE87825D203A80096FC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523EE87A25D203A80096FC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 				523EE8AF25D237A10096FC76 /* FeedCell.swift */,
 				523EE8C125D355210096FC76 /* CustomTextField.swift */,
 				523EE90725DC775A0096FC76 /* UserCell.swift */,
+				52374BD225E1CA26009E9F7E /* CommentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				523EE8A325D229570096FC76 /* NotificationController.swift */,
 				523EE8A625D229690096FC76 /* ProfileController.swift */,
 				52374BC025DF1E75009E9F7E /* UploadPostController.swift */,
+				52374BCF25E1C65B009E9F7E /* CommentController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,10 +374,12 @@
 				523EE8C525D376CF0096FC76 /* AuthenricationViewModel.swift in Sources */,
 				523EE90525DA1E980096FC76 /* ProfileViewModel.swift in Sources */,
 				52374BC125DF1E75009E9F7E /* UploadPostController.swift in Sources */,
+				52374BD025E1C65C009E9F7E /* CommentController.swift in Sources */,
 				523EE87D25D203A80096FC76 /* ViewController.swift in Sources */,
 				52374BCA25DF7472009E9F7E /* Post.swift in Sources */,
 				523EE89B25D229160096FC76 /* FeedController.swift in Sources */,
 				523EE8BB25D349BC0096FC76 /* LoginController.swift in Sources */,
+				52374BD325E1CA26009E9F7E /* CommentCell.swift in Sources */,
 				523EE8F325D8C6D10096FC76 /* ProfileHeader.swift in Sources */,
 				523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */,
 				523EE8B025D237A10096FC76 /* FeedCell.swift in Sources */,

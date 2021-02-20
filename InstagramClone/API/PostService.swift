@@ -38,7 +38,12 @@ struct  PostService {
         let query = COLLETION_POSTS.whereField("ownerUid", isEqualTo: uid)
         query.getDocuments { (snapshot, error) in
             guard let documents = snapshot?.documents else { return }
-            let posts = documents.map({Post(postId: $0.documentID, dictonary: $0.data())})
+            var posts = documents.map({Post(postId: $0.documentID, dictonary: $0.data())})
+            
+            posts.sort { (post1, post2) -> Bool in
+                return post1.timesTamp.seconds > post2.timesTamp.seconds
+            }
+            
             completion(posts)        }
     }
     
