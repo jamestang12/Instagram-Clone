@@ -16,6 +16,7 @@
 		52374BD325E1CA26009E9F7E /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BD225E1CA26009E9F7E /* CommentCell.swift */; };
 		52374BD625E1D229009E9F7E /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BD525E1D229009E9F7E /* CommentInputAccesoryView.swift */; };
 		52374BD925E1FAA7009E9F7E /* CommentServerice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BD825E1FAA7009E9F7E /* CommentServerice.swift */; };
+		52374BDC25E30A7D009E9F7E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BDB25E30A7C009E9F7E /* Comment.swift */; };
 		523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87825D203A80096FC76 /* AppDelegate.swift */; };
 		523EE87B25D203A80096FC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87A25D203A80096FC76 /* SceneDelegate.swift */; };
 		523EE87D25D203A80096FC76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87C25D203A80096FC76 /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		52374BD225E1CA26009E9F7E /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		52374BD525E1D229009E9F7E /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
 		52374BD825E1FAA7009E9F7E /* CommentServerice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentServerice.swift; sourceTree = "<group>"; };
+		52374BDB25E30A7C009E9F7E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		523EE87525D203A80096FC76 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523EE87825D203A80096FC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523EE87A25D203A80096FC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				523EE90125DA16630096FC76 /* User.swift */,
 				52374BC925DF7472009E9F7E /* Post.swift */,
+				52374BDB25E30A7C009E9F7E /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				523EE8EA25D4A6A30096FC76 /* ImageUploader.swift in Sources */,
 				523EE8ED25D4A6B50096FC76 /* AuthService.swift in Sources */,
 				523EE8C525D376CF0096FC76 /* AuthenricationViewModel.swift in Sources */,
+				52374BDC25E30A7D009E9F7E /* Comment.swift in Sources */,
 				523EE90525DA1E980096FC76 /* ProfileViewModel.swift in Sources */,
 				52374BC125DF1E75009E9F7E /* UploadPostController.swift in Sources */,
 				52374BD025E1C65C009E9F7E /* CommentController.swift in Sources */,

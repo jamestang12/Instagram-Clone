@@ -12,6 +12,8 @@ private let reuseIdentifer = "CommentCell"
 class CommentController: UICollectionViewController{
     
     // MARK: - Properties
+    private var comments = [Comment]()
+    
     private let post: Post
     
     private lazy var commentInputView: CommentInputAccesoryView = {
@@ -35,6 +37,7 @@ class CommentController: UICollectionViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        fetchComments()
     }
     
     override var inputAccessoryView: UIView?{
@@ -55,6 +58,15 @@ class CommentController: UICollectionViewController{
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    // MARK: - API
+    
+    func fetchComments(){
+        CommentServerice.fetchComments(forPost: post.postId) { (comment) in
+            self.comments = comment
+            self.collectionView.reloadData()
+        }
+    }
+    
     // MARK: - Helpers
     func configureCollectionView(){
         navigationItem.title = "Comments"
@@ -73,7 +85,7 @@ class CommentController: UICollectionViewController{
 
 extension CommentController{
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return comments.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
