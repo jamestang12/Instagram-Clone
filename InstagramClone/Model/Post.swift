@@ -24,7 +24,7 @@ struct Post {
         self.imageUrl = dictonary["imageUrl"] as? String ?? ""
         self.ownerUid = dictonary["ownerUid"] as? String ?? ""
         self.timesTamp = dictonary["timesTamp"] as? Timestamp ?? Timestamp(date: Date())
-        self.postId = dictonary["postId"] as? String ?? ""
+        self.postId = postId as? String ?? ""
         self.ownerImageUrl = dictonary["ownerImageUrl"] as? String ?? ""
         self.ownerUsername = dictonary["ownerUsername"] as? String ?? ""
     }
