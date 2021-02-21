@@ -17,6 +17,7 @@
 		52374BD625E1D229009E9F7E /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BD525E1D229009E9F7E /* CommentInputAccesoryView.swift */; };
 		52374BD925E1FAA7009E9F7E /* CommentServerice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BD825E1FAA7009E9F7E /* CommentServerice.swift */; };
 		52374BDC25E30A7D009E9F7E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BDB25E30A7C009E9F7E /* Comment.swift */; };
+		52374BDF25E30DCA009E9F7E /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BDE25E30DCA009E9F7E /* CommentViewModel.swift */; };
 		523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87825D203A80096FC76 /* AppDelegate.swift */; };
 		523EE87B25D203A80096FC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87A25D203A80096FC76 /* SceneDelegate.swift */; };
 		523EE87D25D203A80096FC76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87C25D203A80096FC76 /* ViewController.swift */; };
@@ -62,6 +63,7 @@
 		52374BD525E1D229009E9F7E /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
 		52374BD825E1FAA7009E9F7E /* CommentServerice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentServerice.swift; sourceTree = "<group>"; };
 		52374BDB25E30A7C009E9F7E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		52374BDE25E30DCA009E9F7E /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		523EE87525D203A80096FC76 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523EE87825D203A80096FC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523EE87A25D203A80096FC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				523EE90425DA1E970096FC76 /* ProfileViewModel.swift */,
 				523EE90A25DDAF350096FC76 /* UserCellViewModel.swift */,
 				52374BCC25E05AA6009E9F7E /* PostViewModel.swift */,
+				52374BDE25E30DCA009E9F7E /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				52374BC425DF215F009E9F7E /* InputTextView.swift in Sources */,
 				523EE90825DC775A0096FC76 /* UserCell.swift in Sources */,
 				523EE89E25D229260096FC76 /* SearchController.swift in Sources */,
+				52374BDF25E30DCA009E9F7E /* CommentViewModel.swift in Sources */,
 				523EE90B25DDAF360096FC76 /* UserCellViewModel.swift in Sources */,
 				523EE8A725D229690096FC76 /* ProfileController.swift in Sources */,
 				523EE8B325D238670096FC76 /* Extensions.swift in Sources */,
