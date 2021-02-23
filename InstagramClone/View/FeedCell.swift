@@ -9,9 +9,11 @@ import UIKit
 
 protocol FeedCellDelegat: class {
     func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post)
+    func cell(_ cell: FeedCell, didLike post: Post)
 }
 
 class  FeedCell: UICollectionViewCell {
+    
     // MARK: - Properties
     var viewModel: PostViewModel?{
         didSet{ configure() }
@@ -51,6 +53,7 @@ class  FeedCell: UICollectionViewCell {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
         button.tintColor = .black
+        button.addTarget(self, action: #selector(didTabLike), for: .touchUpInside)
         return button
     }()
     
@@ -128,6 +131,11 @@ class  FeedCell: UICollectionViewCell {
     // MARK: - Actions
     @objc func didTapUsername(){
         print("DEBUG: did tap username")
+    }
+    
+    @objc func didTabLike(){
+        guard let viewModel = viewModel else { return }
+        delegate?.cell(self, didLike: viewModel.post)
     }
     
     @objc func didTabComments(){
