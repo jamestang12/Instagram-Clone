@@ -21,6 +21,7 @@
 		52374BE225EC563D009E9F7E /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BE125EC563B009E9F7E /* NotificationCell.swift */; };
 		52374BE525EED4F5009E9F7E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BE425EED4F4009E9F7E /* Notification.swift */; };
 		52374BE825EED809009E9F7E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BE725EED809009E9F7E /* NotificationService.swift */; };
+		52374BEB25EEE0EB009E9F7E /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BEA25EEE0EA009E9F7E /* NotificationViewModel.swift */; };
 		523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87825D203A80096FC76 /* AppDelegate.swift */; };
 		523EE87B25D203A80096FC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87A25D203A80096FC76 /* SceneDelegate.swift */; };
 		523EE87D25D203A80096FC76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87C25D203A80096FC76 /* ViewController.swift */; };
@@ -70,6 +71,7 @@
 		52374BE125EC563B009E9F7E /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		52374BE425EED4F4009E9F7E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		52374BE725EED809009E9F7E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		52374BEA25EEE0EA009E9F7E /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		523EE87525D203A80096FC76 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523EE87825D203A80096FC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523EE87A25D203A80096FC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				523EE90A25DDAF350096FC76 /* UserCellViewModel.swift */,
 				52374BCC25E05AA6009E9F7E /* PostViewModel.swift */,
 				52374BDE25E30DCA009E9F7E /* CommentViewModel.swift */,
+				52374BEA25EEE0EA009E9F7E /* NotificationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				523EE8ED25D4A6B50096FC76 /* AuthService.swift in Sources */,
 				523EE8C525D376CF0096FC76 /* AuthenricationViewModel.swift in Sources */,
 				52374BDC25E30A7D009E9F7E /* Comment.swift in Sources */,
+				52374BEB25EEE0EB009E9F7E /* NotificationViewModel.swift in Sources */,
 				523EE90525DA1E980096FC76 /* ProfileViewModel.swift in Sources */,
 				52374BC125DF1E75009E9F7E /* UploadPostController.swift in Sources */,
 				52374BD025E1C65C009E9F7E /* CommentController.swift in Sources */,
