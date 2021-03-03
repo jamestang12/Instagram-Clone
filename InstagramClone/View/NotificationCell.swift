@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol  NotificationCellDelegate: class {
+    func cell(_ cell: NotificationCell, wantsToFollow uid: String)
+    func cell(_ CELL: NotificationCell, wantsToUnfollow uid: String)
+    func cell(_ cell: NotificationCell, wantsToViewPost postId: String)
+}
+
 class NotificationCell: UITableViewCell{
     
     // MARK: - Properties
@@ -14,6 +20,8 @@ class NotificationCell: UITableViewCell{
     var viewModel: NotificationViewModel? {
         didSet{ configure()  }
     }
+    
+    weak var delegate: NotificationCellDelegate?
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -30,7 +38,7 @@ class NotificationCell: UITableViewCell{
         return label
     }()
     
-    private let postImageView: UIImageView = {
+    private lazy var postImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
@@ -41,7 +49,7 @@ class NotificationCell: UITableViewCell{
         return iv
     }()
     
-    private let followButton: UIButton = {
+    private lazy var followButton: UIButton = {
         let button = UIButton()
         button.setTitle("follow", for: .normal)
         button.layer.cornerRadius = 3
@@ -91,7 +99,8 @@ class NotificationCell: UITableViewCell{
     }
     
     @objc func handlePostTapped(){
-        
+        guard let postId = viewModel?.notification.postId else { return }
+        delegate?.cell(self, wantsToViewPost: postId)
     }
     
     // MARK: - Helpers
@@ -105,6 +114,10 @@ class NotificationCell: UITableViewCell{
         
         postImageView.isHidden = viewModel.shouldHidePostImage
         followButton.isHidden = !viewModel.shouldHidePostImage
+        
+        followButton.setTitle(viewModel.followButtonText, for: .normal)
+        followButton.backgroundColor = viewModel.followButtonBackGroindColor
+        followButton.setTitleColor(viewModel.followButtonTextColor, for: .normal)
         
     }
 }
