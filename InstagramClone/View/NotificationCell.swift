@@ -43,7 +43,7 @@ class NotificationCell: UITableViewCell{
     
     private let followButton: UIButton = {
         let button = UIButton()
-        button.setTitle("title", for: .normal)
+        button.setTitle("follow", for: .normal)
         button.layer.cornerRadius = 3
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.layer.borderWidth = 0.5
@@ -63,17 +63,18 @@ class NotificationCell: UITableViewCell{
         profileImageView.setDimensions(height: 48, width: 48)
         profileImageView.layer.cornerRadius = 48/2
         profileImageView.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 12)
-        
-        addSubview(infoLabel)
-        infoLabel.centerY(inView: profileImageView, leftAnchor: profileImageView.rightAnchor, paddingLeft: 8)
-        
+
         addSubview(followButton)
         followButton.centerY(inView: self)
-        followButton.anchor(right: rightAnchor, paddingRight: 12, width: 100, height: 32)
+        followButton.anchor(right: rightAnchor, paddingRight: 12, width: 88, height: 32)
         
         addSubview(postImageView)
         postImageView.centerY(inView: self)
         postImageView.anchor(right: rightAnchor, paddingRight: 12, width: 40, height: 40)
+        
+        addSubview(infoLabel)
+        infoLabel.centerY(inView: profileImageView, leftAnchor: profileImageView.rightAnchor, paddingLeft: 8)
+        infoLabel.anchor(right: followButton.leftAnchor, paddingRight: 4)
         
         followButton.isHidden = true
         
@@ -101,5 +102,9 @@ class NotificationCell: UITableViewCell{
         postImageView.sd_setImage(with: viewModel.postImageUrl)
         
         infoLabel.attributedText = viewModel.notificationMessage
+        
+        postImageView.isHidden = viewModel.shouldHidePostImage
+        followButton.isHidden = !viewModel.shouldHidePostImage
+        
     }
 }
