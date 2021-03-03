@@ -29,9 +29,9 @@ class NotificationCell: UITableViewCell{
         iv.clipsToBounds = true
         iv.backgroundColor = .lightGray
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleProfileImageTapped))
-        iv.isUserInteractionEnabled = true
-        iv.addGestureRecognizer(tap)
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(handleProfileImageTapped))
+//        iv.isUserInteractionEnabled = true
+//        iv.addGestureRecognizer(tap)
         return iv
     }()
     
@@ -71,7 +71,7 @@ class NotificationCell: UITableViewCell{
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         
-        contentView.addSubview(profileImageView)
+        addSubview(profileImageView)
         profileImageView.setDimensions(height: 48, width: 48)
         profileImageView.layer.cornerRadius = 48/2
         profileImageView.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 12)
@@ -100,9 +100,10 @@ class NotificationCell: UITableViewCell{
     // MARK: - Actions
     @objc func handleFollowTap(){
         guard let viewModel = viewModel else { return }
+        
         if viewModel.notification.userIsFollowed{
             delegate?.cell(self, wantsToUnfollow: viewModel.notification.uid)
-        } else {
+        }else{
             delegate?.cell(self, wantsToFollow: viewModel.notification.uid)
         }
     }
