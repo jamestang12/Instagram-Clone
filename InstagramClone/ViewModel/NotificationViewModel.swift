@@ -9,7 +9,7 @@ import UIKit
 
 struct NotificationViewModel{
     
-    let notification: Notification
+    var notification: Notification
     
     init(notification: Notification) {
         self.notification = notification
