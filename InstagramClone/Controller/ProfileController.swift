@@ -140,6 +140,8 @@ extension ProfileController: ProfileHeaderelegate{
             UserService.unfollow(uid: user.uid) { (error) in
                 self.user.isFollwed = false
                 self.collectionView.reloadData()
+                PostService.updateUserFeedAfterFollowing(user: user, didFollow: false)
+                
             }
             
         }else{
@@ -148,7 +150,7 @@ extension ProfileController: ProfileHeaderelegate{
                 self.collectionView.reloadData()
                 
                 NotificationService.uploadNotification(toUid: user.uid, fromUser: currentUser, type: .follow)
-                PostService.updateUserFeedAfterFollowing(user: user)
+                PostService.updateUserFeedAfterFollowing(user: user, didFollow: true)
             }
         }
     }
