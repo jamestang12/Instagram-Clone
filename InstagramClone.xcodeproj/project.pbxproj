@@ -22,6 +22,7 @@
 		52374BE525EED4F5009E9F7E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BE425EED4F4009E9F7E /* Notification.swift */; };
 		52374BE825EED809009E9F7E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BE725EED809009E9F7E /* NotificationService.swift */; };
 		52374BEB25EEE0EB009E9F7E /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BEA25EEE0EA009E9F7E /* NotificationViewModel.swift */; };
+		52374BEE25F962F0009E9F7E /* RessetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52374BED25F962EE009E9F7E /* RessetPasswordController.swift */; };
 		523EE87925D203A80096FC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87825D203A80096FC76 /* AppDelegate.swift */; };
 		523EE87B25D203A80096FC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87A25D203A80096FC76 /* SceneDelegate.swift */; };
 		523EE87D25D203A80096FC76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EE87C25D203A80096FC76 /* ViewController.swift */; };
@@ -72,6 +73,7 @@
 		52374BE425EED4F4009E9F7E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		52374BE725EED809009E9F7E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		52374BEA25EEE0EA009E9F7E /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		52374BED25F962EE009E9F7E /* RessetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessetPasswordController.swift; sourceTree = "<group>"; };
 		523EE87525D203A80096FC76 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523EE87825D203A80096FC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523EE87A25D203A80096FC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			children = (
 				523EE8BA25D349BB0096FC76 /* LoginController.swift */,
 				523EE8BE25D349DC0096FC76 /* RegistrationController.swift */,
+				52374BED25F962EE009E9F7E /* RessetPasswordController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				523EE89E25D229260096FC76 /* SearchController.swift in Sources */,
 				52374BDF25E30DCA009E9F7E /* CommentViewModel.swift in Sources */,
 				523EE90B25DDAF360096FC76 /* UserCellViewModel.swift in Sources */,
+				52374BEE25F962F0009E9F7E /* RessetPasswordController.swift in Sources */,
 				52374BE225EC563D009E9F7E /* NotificationCell.swift in Sources */,
 				52374BE825EED809009E9F7E /* NotificationService.swift in Sources */,
 				523EE8A725D229690096FC76 /* ProfileController.swift in Sources */,
