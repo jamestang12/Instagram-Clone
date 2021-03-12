@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol ResetPasswordControllerDelegate: class {
+    func controllerDidSendResetPasswordLink(_ controller: RessetPasswordController)
+}
+
 class RessetPasswordController: UIViewController{
     
     // MARK: - Properties
     
     private let emailTextField = CustomTextField(placeholder: "Email")
     private var viewModel = ResetPasswordViewModel()
+    weak var delegate: ResetPasswordControllerDelegate?
     
     private let iconImage :UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
@@ -50,7 +55,14 @@ class RessetPasswordController: UIViewController{
     
     // MARK: - Action
     @objc func handleResetPassword(){
-        
+        guard let email = emailTextField.text else { return }
+        showLoader(true)
+        AuthService.resetPassword(withEmail: email) { (error) in
+            self.showMessage(withTitle: "Error", message: error?.localizedDescription ?? "Fail to reset password")
+            self.showLoader(false)
+            return
+        }
+        self.delegate?.controllerDidSendResetPasswordLink(self)
     }
     
     @objc func textDidChange(sender: UITextView){

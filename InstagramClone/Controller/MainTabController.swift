@@ -30,7 +30,7 @@ class MainTabController: UITabBarController{
     
     // MARK: - API
     func checkIfUserIsLoggedIn(){
-        if Auth.auth().currentUser == nil {
+     //   if Auth.auth().currentUser == nil {
             DispatchQueue.main.async {
                 let controller = LoginController()
                 controller.delegate = self
@@ -39,7 +39,7 @@ class MainTabController: UITabBarController{
                 self.present(nav, animated: true, completion: nil)
             }
             
-        }
+       // }
     }
     
     func fetchUser(){
