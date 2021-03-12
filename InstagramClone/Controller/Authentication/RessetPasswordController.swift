@@ -12,6 +12,8 @@ class RessetPasswordController: UIViewController{
     // MARK: - Properties
     
     private let emailTextField = CustomTextField(placeholder: "Email")
+    private var viewModel = ResetPasswordViewModel()
+    
     private let iconImage :UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
         iv.contentMode = .scaleAspectFill
@@ -51,6 +53,13 @@ class RessetPasswordController: UIViewController{
         
     }
     
+    @objc func textDidChange(sender: UITextView){
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        }
+        updateForm()
+    }
+    
     @objc func handleDismissal(){
         navigationController?.popViewController(animated: true)
     }
@@ -59,6 +68,8 @@ class RessetPasswordController: UIViewController{
     
     func configureUI(){
         configureGradientLayer()
+        
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         
         view.addSubview(backButton)
         backButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 16, paddingLeft: 16)
@@ -75,4 +86,16 @@ class RessetPasswordController: UIViewController{
         view.addSubview(stack)
         stack.anchor(top: iconImage.bottomAnchor, left:  view.leftAnchor, right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: 32)
     }
+    
 }
+
+//MARK: - FormViewModel
+extension RessetPasswordController: FormViewModel{
+    func updateForm() {
+        resetPasswordButton.backgroundColor = viewModel.buttonBackgroundColor
+        resetPasswordButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        resetPasswordButton.isEnabled = viewModel.formIsValid
+    }
+}
+
+
