@@ -18,6 +18,7 @@ class RessetPasswordController: UIViewController{
     private let emailTextField = CustomTextField(placeholder: "Email")
     private var viewModel = ResetPasswordViewModel()
     weak var delegate: ResetPasswordControllerDelegate?
+    var email: String?
     
     private let iconImage :UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
@@ -58,11 +59,15 @@ class RessetPasswordController: UIViewController{
         guard let email = emailTextField.text else { return }
         showLoader(true)
         AuthService.resetPassword(withEmail: email) { (error) in
-            self.showMessage(withTitle: "Error", message: error?.localizedDescription ?? "Fail to reset password")
-            self.showLoader(false)
-            return
+            if let error = error {
+                self.showMessage(withTitle: "Error", message: error.localizedDescription)
+                self.showLoader(false)
+                return
+            }
+            self.delegate?.controllerDidSendResetPasswordLink(self)
+
         }
-        self.delegate?.controllerDidSendResetPasswordLink(self)
+
     }
     
     @objc func textDidChange(sender: UITextView){
@@ -81,6 +86,10 @@ class RessetPasswordController: UIViewController{
     func configureUI(){
         configureGradientLayer()
         
+        emailTextField.text = email
+
+        viewModel.email = email
+        updateForm()
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         
         view.addSubview(backButton)
