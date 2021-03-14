@@ -13,7 +13,7 @@ struct Post {
     var likes: Int
     let imageUrl: String
     let ownerUid: String
-    let timesTamp: Timestamp
+    let timestamp: Timestamp
     let postId: String
     let ownerImageUrl: String
     let ownerUsername: String
@@ -24,8 +24,8 @@ struct Post {
         self.likes = dictonary["likes"] as? Int ?? 0
         self.imageUrl = dictonary["imageUrl"] as? String ?? ""
         self.ownerUid = dictonary["ownerUid"] as? String ?? ""
-        self.timesTamp = dictonary["timesTamp"] as? Timestamp ?? Timestamp(date: Date())
-        self.postId = postId 
+        self.timestamp = dictonary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
+        self.postId = postId
         self.ownerImageUrl = dictonary["ownerImageUrl"] as? String ?? ""
         self.ownerUsername = dictonary["ownerUsername"] as? String ?? ""
     }

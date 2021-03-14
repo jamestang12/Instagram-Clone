@@ -17,12 +17,18 @@ class FeedController: UICollectionViewController {
     }
     
     var post: Post?{
-        didSet{ checkIfUserLikedPosts() }
+        didSet{
+            collectionView.reloadData()
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         fetchPosts()
+        
+        if post != nil {
+            checkIfUserLikedPosts()
+        }
         
     }
     
@@ -30,6 +36,7 @@ class FeedController: UICollectionViewController {
     @objc func habdleRefresh(){
         posts.removeAll()
         fetchPosts()
+    
     }
     
     @objc func habdleLogout(){
@@ -64,7 +71,6 @@ class FeedController: UICollectionViewController {
         if let post = post {
             PostService.checkIfUserLikedPost(post: post) { didLike in
                 self.post?.didLike = didLike
-                self.collectionView.reloadData()
             }
         }else {
             posts.forEach{ post in

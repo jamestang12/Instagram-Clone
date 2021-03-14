@@ -44,7 +44,7 @@ struct  PostService {
             var posts = documents.map({Post(postId: $0.documentID, dictonary: $0.data())})
             
             posts.sort { (post1, post2) -> Bool in
-                return post1.timesTamp.seconds > post2.timesTamp.seconds
+                return post1.timestamp.seconds > post2.timestamp.seconds
             }
             
             completion(posts)        }
