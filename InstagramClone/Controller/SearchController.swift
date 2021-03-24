@@ -60,6 +60,7 @@ class SearchController: UIViewController {
         
         view.addSubview(tableView)
         tableView.fillSuperview()
+        tableView.isHidden = true
         
         view.addSubview(colletionView)
         colletionView.fillSuperview()
@@ -70,6 +71,7 @@ class SearchController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         definesPresentationContext = false
     }
@@ -96,6 +98,22 @@ extension SearchController: UITableViewDelegate{
         let user = inSearchMode ? filteredUsers[indexPath.row] : users[indexPath.row]
         let controller = ProfileController(user: user)
         navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension SearchController: UISearchBarDelegate{
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+        colletionView.isHidden = true
+        tableView.isHidden = false
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        searchBar.showsCancelButton = false
+        searchBar.text = nil
+        colletionView.isHidden = false
+        tableView.isHidden = true
     }
 }
 
@@ -144,7 +162,7 @@ extension SearchController: UICollectionViewDelegateFlowLayout{
         return CGSize(width: width, height: width)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 240)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize(width: view.frame.width, height: 240)
+//    }
 }
