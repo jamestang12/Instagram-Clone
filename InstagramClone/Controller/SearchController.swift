@@ -39,6 +39,7 @@ class SearchController: UIViewController {
         configureSearchController()
         configureUI()
         fetchUsers()
+        fetchPosts()
     }
     
     // MARK: - API
@@ -49,9 +50,17 @@ class SearchController: UIViewController {
         }
     }
     
+    func fetchPosts(){
+        PostService.fetchPosts { posts in
+            self.posts = posts
+            self.colletionView.reloadData()
+        }
+    }
+    
     // MARK: - Helpers
     
     func configureUI(){
+        navigationItem.title = "Explore"
         view.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
@@ -131,12 +140,12 @@ extension SearchController: UISearchResultsUpdating{
 // MARK: - UICollectionViewDataSource
 extension SearchController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        15
+        posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifer, for: indexPath) as! ProfileCell
-//        cell.viewModel = PostViewModel(post: posts[indexPath.row])
+        cell.viewModel = PostViewModel(post: posts[indexPath.row])
         return cell
     }
     
@@ -145,7 +154,11 @@ extension SearchController: UICollectionViewDataSource{
 
 // MARK: - UICollectionViewDelegate
 extension SearchController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = FeedController(collectionViewLayout: UICollectionViewFlowLayout())
+        controller.post = posts[indexPath.row]
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 extension SearchController: UICollectionViewDelegateFlowLayout{
